@@ -1,0 +1,32 @@
+
+#mainimage
+{
+    display: none;
+    width: 50%;
+    margin: auto auto;
+    height: 50vh;
+    text-transform: full-width;
+    border: 2px solid white;
+}
+.notripi{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+
+}
+#cityname
+{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: full-width;
+    font-weight: bold;
+    text-transform: full-width;
+    color: rgb(22, 6, 6);
+    padding:2vh;
+}
+#dateoftravel,#min-temp,#max-temp,#desc
+{
+    text-align: center;
+    padding:2vh;
+    text-transform: full-width;
+}

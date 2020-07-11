@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Mate</title>
+   
+
+
+</head>
+<body>
+
+    <header><p id ="header22">
+      Welcome To My WebSite</p>
+    </header>
+    <section>
+        <div class="trip">
+            <div class="notrip">
+            <img id='notripi' alt="no trip image">
+            <h3>No Trip Yet Create One!!</h3>
+            </div>
+            <div class="trip-data">
+                <img id="mainimage">
+                <h2 id="cityname"></h2>
+                <h4 id="dateoftravel"></h4>
+                <p id='min-temp'></p>
+                <p id='max-temp'></p>
+                <p id='desc'></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        
+            <div class="search">
+                    <table class="form-filds">
+                        <tr><div>
+                            <td class="form-label">
+                                <h2>Where You Want Go?</h2>
+                            </td>
+                            <td class="input" id="cityName">
+                                <input type="text" placeholder="Enter Your Dream Destination" id="placetogo" class="input-styling" onfocus="Client.onInputFocus(this,'placetogo')" onBlur="Client.onBlur(this,'placetogo')">
+                                <label class="error"></label>
+                            </td>
+                            <td class="input">
+                                <input type="date" placeholder="date" id="dateid" class="input-styling" onfocus="Client.onInputFocus(this,'dateid')" onBlur="Client.onBlur(this,'dateid')">
+                                <label class="error"></label>
+                            </td>
+
+                        </div>
+                      </tr>
+                        <tr>
+                        <td>
+                        <div><td class="input">
+                            <input type="submit" value="Decide Your Own Destiny" id="submit" class="input-styling">
+                        </div>
+                      </td>
+                      </tr>
+                        <tr>
+                            <td></td>
+                            <td class="error" id="nameerror"></td>
+                            <td class="error" id="dateerror"></td>
+                        </tr>
+                    </table>
+            </div>
+        
+    </section>
+
+    <
+
+    <script>
+                // Check that service workers are supported
+                if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js').then(registraion=>{
+                        console.log('registraion is succesfull')
+                    });
+                });
+            }
+            else{
+                console.log('service worker are not supported')
+            }
+    </script>
+</body>
+</html>
