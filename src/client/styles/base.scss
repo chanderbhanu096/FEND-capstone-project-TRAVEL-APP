@@ -1,20 +1,52 @@
+.trip{
+  height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  width: 50%;
+
+}
+.left{
+  left: 0;
+  background-color: 	#EE82EE;
+}
+
+.whole {
+  height:500px;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #FFC0CB;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
 
 .main{
-  display: flex;
-  align-items: flex-end;
 
-  width: 100%;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
-#header22{
-  text-align: center;
-  font-size:3rem;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
+
+
 body{
-  background-color: #C86464;
+  background-image: url("Background_picture.jpg");
+  background-color: #D3D3D3;
 }
 
 @media screen and (max-width:900px)
@@ -22,8 +54,7 @@ body{
   .main{
       display: flex;
       align-items: flex-end;
-     // background-image: url("./../media/Background_picture.jpg");
-     background-color:#C86464;
+      background-image: url("Background_picture.jpg");
       width: 100%;
       height: 600px;
       background-repeat: no-repeat;
@@ -90,7 +121,6 @@ color: green !important;
 }
 #notripi{
   color: #FFFFFF;
-  
 }
 #submit
 {
@@ -114,6 +144,7 @@ color: green !important;
 .trip
 {
   margin:1rem;
+
 }
 @media screen and (max-width:900px)
 {
