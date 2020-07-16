@@ -1,7 +1,8 @@
 /* Geoname Api Accessing */
 const geoNamesApiUrl = name => {
-    const baseUrl = 'http://api.geonames.org/?username=chanderbhanu096=0.8&maxRows=10&name=';
+    const baseUrl = 'http://api.geonames.org/searchJSON?username=chanderbhanu096&fuzzy=0.8&maxRows=10&name=';
     const geoApi =baseUrl + name; 
+    const data = fetch(geoApi);
     return geoApi.json();
 };
 
@@ -13,7 +14,7 @@ const weatherBitApiUrl = (time,lat,long)=>{
 
 /* using the API for fetching travelling location image */ 
 const pixaBayApiUrl = place => {
-    const pixApi= `https://pixabay.com/api/?key=${pixKey}&q=${place}&image_type=photo`
+    const pixApi= `https://pixabay.com/api/?key=15324148-2985f37b999ac9cae0550d3a1&q=${place}&image_type=photo`;
     return pixApi.json();
 };
 
