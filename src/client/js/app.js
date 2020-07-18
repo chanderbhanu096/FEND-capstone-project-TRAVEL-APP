@@ -1,5 +1,28 @@
 import{geo_Api,weatherAPI,PixaBayAPI} from './datafetchfromapis'
 
+//post Data to the server
+
+const postDataToServer = async (Url = '', data = {}) => {
+    //body of the response
+    const response = await fetch(Url, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    });
+
+    try {
+        //wait for data from server
+        const newData = await response.json();
+        console.log(newData);
+        return newData;
+    } catch (error) {
+        console.log('postData error: ', error);
+    }
+};
+
 const submitEvent = event => {
     //fetch location of the plcae from userinput 
     const place_name = document.getElementById('placetogo').value;
@@ -38,8 +61,12 @@ const submitEvent = event => {
    if(Difference_In_Days < 0){
     document.getElementById('dateid').style.cssText="border:1px solid red";
     document.getElementById('dateerror').innerHTML="Please Enter a Valid Date for future trip";
-   }else{
-       callGeoApi(place_name);
    }
 
+   geo_Api(place_name).then(function(geoData){
+
+    });
+
+
 }
+
