@@ -64,9 +64,32 @@ const submitEvent = event => {
    }
 
    geo_Api(place_name).then(function(geoData){
+        const lat = geoData.geonames[0].lat;
+        const lng = geoData.geonames[0].lng;
 
-    });
+        weatherAPI(Difference_In_Days,lat,lng).then(function(weatherData){
+            PixaBayAPI(geoData.geonames[0].name+'+'+geoData.geonames[0].countryName).then(function(picData){
+                let postData = {
+                    latitude: wData.lat,
+                    longitude: wData.lon,
+                    cityName: gData.geonames[0].name,
+                    country: gData.geonames[0].countryName,
+                    max_temp: wData.data[wData.data.length - 1].max_temp,
+                    min_temp: wData.data[wData.data.length - 1].min_temp,
+                    weatherDesc: wData.data[wData.data.length - 1].weather.description,
+                    tripDate: wData.data[wData.data.length - 1].valid_date,
+                    imageUrl: pData.hits[0] ? pData.hits[0].webformatURL : null
+                };
+                localStorage.setItem('tripData', JSON.stringify(postData));
+                postDataToServer('/addTravelInfo', postData);
+            })
+            .then(updateUI);
+        })
+    })
+};
 
+//update data/UI on the use
+const updateUI = async () => {{
 
 }
 
