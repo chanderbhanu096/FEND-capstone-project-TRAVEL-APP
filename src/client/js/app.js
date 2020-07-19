@@ -80,14 +80,32 @@ const submitEvent = event => {
                     tripDate: wData.data[wData.data.length - 1].valid_date,
                     imageUrl: pData.hits[0] ? pData.hits[0].webformatURL : null
                 };
-                localStorage.setItem('tripData', JSON.stringify(postData));
+                localStorage.setItem('TravelInfo', JSON.stringify(postData));
                 postDataToServer('/addTravelInfo', postData);
             })
-            .then(updateUI);
+            .then(getDataFromServer('http://localhost:3000/getTravelInfo').then(function(getData)
+            {
+                updateUI(getData);
+            })
+            );
         })
     })
 };
 
+//To get the data saved on the server
+
+const getDataFromServer=async (baseurl)=>
+{
+    const weatherdata=await fetch(baseurl);
+    try{
+        const getData=weatherdata.json();
+        return getData;
+    }
+    catch(error)
+    {
+        console.log("server error"+error);
+    }
+}
 //update data/UI on the use
 const updateUI = async () => {{
 
