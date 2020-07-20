@@ -85,7 +85,7 @@ const submitEvent = event => {
             })
             .then(getDataFromServer('http://localhost:3000/getTravelInfo').then(function(getData)
             {
-                updateUI(getData);
+                updateUserInterface(getData);
             })
             );
         })
@@ -107,7 +107,8 @@ const getDataFromServer=async (baseurl)=>
     }
 }
 //update data/UI on the use
-const updateUI = async () => {{
+const updateUserInterface = (getData) => {
+
 
 }
 

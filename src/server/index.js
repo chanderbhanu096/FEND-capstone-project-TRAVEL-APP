@@ -25,27 +25,31 @@ app.get('/', function (req, res) {
 })
 
 
-const port=8081;
+const port=3000;
 const server=app.listen(port,startServer);
 function startServer()
 {
-    console.log("server is started on 8081");
+    console.log("server is started");
 }
 
-// Trip Info
-app.post('/TripInfo',function(req,res){
+/*create routes for post request of weather data*/
+app.post('/addTravelInfo',function(req,res){
 
     console.log(req.body);
     newEntry={
         weather:req.body.weather,
-        date:req.body.TripDate,
         cityname:req.body.cityname,
+        country:req.body.country,
+        max_temp:req.body.max_temp,
+        min_temp:req.body.min,
+        tripDate:req.body.tripDate,
+        imageUrl:req.body.imageUrl,
     };
     postData1.push(newEntry);
     res.send(postData1);
 });
 
 
-app.get('/getTripInfo',function(req,res){
+app.get('/addTravelInfo',function(req,res){
         res.send(postData1);
 });
