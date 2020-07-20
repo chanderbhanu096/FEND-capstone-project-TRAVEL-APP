@@ -1,5 +1,6 @@
 import { onBlurInput } from './js/createButton'
 import { onInputFocus } from './js/createButton';
+import {submitEvent} from './js/app'
 
 import './styles/base.scss'
 import './styles/form.scss'
@@ -11,5 +12,6 @@ export
 
     onBlurInput,
     onInputFocus,
+    submitEvent
 
 }
