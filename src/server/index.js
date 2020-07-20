@@ -50,6 +50,6 @@ app.post('/addTravelInfo',function(req,res){
 });
 
 
-app.get('/addTravelInfo',function(req,res){
+app.get('/getTravelInfo',function(req,res){
         res.send(postData1);
 });

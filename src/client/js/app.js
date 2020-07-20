@@ -81,7 +81,7 @@ const submitEvent = event => {
                     imageUrl: pData.hits[0] ? pData.hits[0].webformatURL : null
                 };
                 localStorage.setItem('TravelInfo', JSON.stringify(postData));
-                postDataToServer('/addTravelInfo', postData);
+                postDataToServer('http://localhost:3000/addTravelInfo', postData);
             })
             .then(getDataFromServer('http://localhost:3000/getTravelInfo').then(function(getData)
             {
