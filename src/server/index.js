@@ -38,10 +38,14 @@ app.post('/addTravelInfo',function(req,res){
     console.log(req.body);
     newEntry={
         weather:req.body.weather,
-        cityname:req.body.cityname,
+        cityName:req.body.cityName,
+        longitude:req.body.longitude,
+        latitude:req.body.latitude,
+        weatherdescription:req.body.weatherdescription,
+        weathericon:req.body.weathericon,
         country:req.body.country,
         max_temp:req.body.max_temp,
-        min_temp:req.body.min,
+        min_temp:req.body.min_temp,
         tripDate:req.body.tripDate,
         imageUrl:req.body.imageUrl,
     };
