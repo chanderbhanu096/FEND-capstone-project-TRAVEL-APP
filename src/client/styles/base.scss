@@ -1,21 +1,25 @@
-.trip{
-  height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-  width: 50%;
+// .trip{
+//   
+//     width: 50%;
+//     position: fixed;
+//     z-index: 1;
+//     top: 0;
+//     overflow-x: hidden;
+//     padding-top: 20px;
+//   width: 50%;
 
-}
+// }
 .left{
   left: 0;
+  width: 100%;
+  height: 100%;
+  display:none;
   background-color: 	#EE82EE;
 }
 
 .whole {
-  height:500px;
+  height:90%;
+  display: flex;
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -32,15 +36,16 @@
 
 
 .main{
-
-  right: 0;
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+  // display: flex;
+  // right: 0;
+  float: right;
+  // height: 100%;
+  // width: 30%;
+  // // position: fixed;
+  // z-index: 1;
+  // top: 0;
+  // overflow-x: hidden;
+  // padding-top: 20px;
 }
 
 
@@ -51,32 +56,40 @@ body{
 
 @media screen and (max-width:900px)
 {
-  .main{
-      display: flex;
-      align-items: flex-end;
-      width: 100%;
-      height: 600px;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+  .whole{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 }
-.search{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.4rem;
-  width: 100%;
-  box-sizing: border-box;
-}
+
+// @media(max-width:900px)
+// {
+//   .trip
+//   {
+//       display: flex;    
+//       flex-direction: column;
+     
+//   }
+// }
 @media(max-width:900px)
 {
-  .search
-  {
+  .left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main
+  {   
+      position: relative;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
+      flex-direction: column;
+     
   }
 }
 header{
@@ -105,9 +118,13 @@ header{
   color: lightgray;
   font-size: 1rem;
 }
+@media screen and (max-width:900px)
+{
 input[type=date] {
   background-color: #3CBC8D;
   color: white;
+  justify-content: center;
+}
 }
 input[type=text] {
   background-color: #3CBC8D;

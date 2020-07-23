@@ -2,7 +2,6 @@ import{geo_Api,weatherAPI,PixaBayAPI} from './datafetchfromapis'
 
 //post Data to the server
 
-var submitcounter = 0 ;
 const postDataToServer = async (Url = '', data = {}) => {
     //body of the response
     const response = await fetch(Url, {
@@ -125,15 +124,22 @@ const getDataFromServer=async (baseurl)=>
 }
 //update data/UI on the use
 const updateUserInterface = (getData) => {
-
     
-    console.log(getData.min_temp);
-    document.getElementById('min-temp').innerHTML=`Minimum Temp: ${getData[1].min_temp}`;
-    document.getElementById('max-temp').innerHTML=`Maximum Temp: ${getData[1].max_temp}`;
-    document.getElementById("mainimage").src = "`${getData[1].imageUrl}`";
-    console.log(`${getData[1].imageUrl}`);
+console.log(getData.length);
+    
+    document.getElementById('min-temp').innerHTML=`Minimum Temp: ${getData[getData.length].min_temp}`;
+    document.getElementById('max-temp').innerHTML=`Maximum Temp: ${getData[getData.length].max_temp}`;
+    document.getElementById('place').innerHTML=`Place: ${getData[getData.length].cityName}`;
+    document.getElementById('country').innerHTML=`Country: ${getData[getData.length].country}`;
+    document.getElementById('dateoftravel').innerHTML=`Date Of Travel: ${getData[getData.length].tripDate}`;
+    document.getElementById('desc').innerHTML=`Weather: ${getData[getData.length].weatherdescription}`;
+    document.getElementById("mainimage").src = "`${getData[weatherData.data.length].imageUrl}`";
+    console.log(`${getData[getData.length].imageUrl}`);
     document.getElementById("mainimage").style.display = "block";
-    document.getElementById("mainimage").setAttribute("src", `${getData[1].imageUrl}`);
-    
+    document.getElementById("left").style.display = "block";
+    document.getElementById("place").style.justifyContent = "center";
+    document.getElementById("abcdef").style.display = "none";
+    document.getElementById("mainimage").setAttribute("src", `${getData[getData.length].imageUrl}`);
+   
 }
 

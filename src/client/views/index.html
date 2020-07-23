@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Mate</title>
-   
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Mate</title>
 </head>
+
 <body>
 
-    <header><p id ="header22">
+  <header>
+    <p id="header22">
       Welcome To My WebSite</p>
-    </header>
-    <div class= "whole">
-        <div class="trip">
-          <div class="left">
-            <div class="notrip">
-            <img id='notripi' alt="no trip image">
-            <h3>No Trip Yet Create One!!</h3>
-            </div>
-            <div class="trip-data">
-                <img id="mainimage">
-                <h2 id="place"></h2>
-                <h4 id="dateoftravel"></h4>
-                <p id='min-temp'></p>
-                <p id='max-temp'></p>
-                <p id='desc'></p>
-            </div>
-          </div>
+  </header>
+  <div class="whole">
+    <div class="trip">
+      <div class="left" id = "left">
+        <div class="notrip">
+          <img id='notripi' >
+          <h3 id="abcdef">No Trip Yet Create One!!</h3>
         </div>
-        <div class="main">
-            <div class="search">
-                    <table class="form-filds">
-                        <tr><div>
-                            <td class="form-label">
-                                <h2>Enter Your Destination</h2>
-                            </td>
-                            <td class="input" id="place">
-                                <input type="text" placeholder="Enter Your Dream Destination" id="placetogo" class="input-styling" onfocus="Client.onInputFocus(this,'placetogo')" onBlur="Client.onBlurInput(this,'placetogo')">
-                                <label class="error"></label>
-                            </td>
-
-
-                        </div>
-                      </tr>
-                      <tr>
-                        <td class="form-label">
-                            <h2>Select Date</h2>
-                        </td>
-                        <td class="input">
-                          <input type="date" placeholder="date" id="dateid" class="input-styling" onfocus="Client.onInputFocus(this,'dateid')" onBlur="Client.onBlurInput(this,'dateid')">
-                          <label class="error"></label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div><td class="input">
-                            <input type="submit" value="Decide Your Own Destiny" id="submit" class="input-styling" onClick="Client.submitEvent()">
-                          </div>
-                        </td>
-                      </tr>
-                        <tr>
-                            <td></td>
-                            <td class="error" id="nameerror"></td>
-                            <td class="error" id="dateerror"></td>
-                        </tr>
-                    </table>
-
-            </div>
+        <div class="trip-data">
+          <img id="mainimage">
+          <h4 id="place"></h4>
+          <p id="country"></p>
+          <h4 id="dateoftravel"></h4>
+          <p id='min-temp'></p>
+          <p id='max-temp'></p>
+          <p id='desc'></p>
         </div>
-
       </div>
     </div>
-    <script>
+    <div class="main">
+      <div class="search">
+        <table class="form-filds">
+          <tr>
+            <div>
+              <td class="form-label">
+                <h2>Enter Your Destination</h2>
+              </td>
+              <td class="input" id="place">
+                <input type="text" placeholder="Enter Your Dream Destination" id="placetogo" class="input-styling"
+                  onfocus="Client.onInputFocus(this,'placetogo')" onBlur="Client.onBlurInput(this,'placetogo')">
+                <label class="error"></label>
+              </td>
+            </div>
+          </tr>
+          <tr>
+            <td class="form-label">
+              <h2>Select Date</h2>
+            </td>
+            <td class="input">
+              <input type="date" placeholder="date" id="dateid" class="input-styling"
+                onfocus="Client.onInputFocus(this,'dateid')" onBlur="Client.onBlurInput(this,'dateid')">
+              <label class="error"></label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <td class="input">
+                  <input type="submit" value="Decide Your Own Destiny" id="submit" class="input-styling"
+                  onClick="Client.submitEvent()">
+                </td>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="error" id="nameerror"></td>
+            <td class="error" id="dateerror"></td>
+          </tr>
+      </table>
 
-                if ('serviceWorker' in navigator) {
-                  window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js').then(registraion=>{
-                        console.log('registraion is succesfull')
-                    });
-                });
-            }
-            else{
-                console.log('service worker are not supported')
-            }
-    </script>
+    </div>
+  </div>
+  <script>
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').then(registraion => {
+          console.log('registraion is succesfull')
+        });
+      });
+    }
+    else {
+      console.log('service worker are not supported')
+    }
+  </script>
 </body>
+
 </html>
