@@ -9,6 +9,9 @@
 //   width: 50%;
 
 // }
+#submit:hover {
+  background-color: yellow;
+}
 .left{
   left: 0;
   width: 100%;
@@ -141,6 +144,9 @@ color: green !important;
   width: 225px;
   border: 1px solid white;
   border-radius: 0.3rem;
+}
+#submit:hover{
+    background-color: yellow;
 }
 .error
 {
