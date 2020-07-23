@@ -29,7 +29,7 @@ const port=3000;
 const server=app.listen(port,startServer);
 function startServer()
 {
-    console.log("server is started");
+    console.log(`server is started on ${port}`);
 }
 
 /*create routes for post request of weather data*/
