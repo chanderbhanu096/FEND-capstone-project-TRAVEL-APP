@@ -10,15 +10,15 @@ Sorry But I am not Much into Writing . So My instructions for running on your sy
 	   in Pixabay api to fetch the picture of that location.
 
 ## Technology and other thing used / learnt
-	###Webpack
-	###Sass
-	###Express 
-	###service workers
-	###asynchronous javascript
-	###Geonames Api
-	###Weatherbit Api
-	###Pixabay Api
-	###HTML/CSS/JS/JEST/JSON
+	### Webpack
+	### Sass
+	### Express 
+	### service workers
+	### asynchronous javascript
+	### Geonames Api
+	### Weatherbit Api
+	### Pixabay Api
+	### HTML/CSS/JS/JEST/JSON
 
 ## Steps For Running The Project On Your System
 ### 1.First Step :
